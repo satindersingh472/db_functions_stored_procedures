@@ -50,9 +50,17 @@ SELECT count(p.id),c.username
 	from purchase p inner join customer c on p.customer_id = c.id
 	group by c.id;
 	
+-- select statment for money spent by any customer after 2022-01-01 01:00:00
+select c.username,COUNT(p.id),sum(i.price)
+from purchase p inner join item i on i.id = p.item_id inner join customer c on c.id = p.customer_id
+where p.purchase_time > '2022-01-01 01:00:00'
+group by c.id;
 
 
-
+-- call for stored procedures total amount of money spent by any customer
+call purchase_dates ('2022-01-01 12:00:00 ', 3);
+call purchase_dates ('2022-01-01 12:00:00',4);
+call purchase_dates ('2020-07-01 14:00:00' ,3);
 
 
 
