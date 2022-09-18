@@ -8,5 +8,4 @@ insert into purchase (purchase_time, customer_id, item_id)
 values('2010-06-01 05:00:00', 1,1),('2010-06-15 05:00:00',1,2),('2010-07-01 06:00:00', 1, 3),('2010-07-01 06:00:00 ', 1, 4),('2010-08-01 06:00:00',1,5),
 ('2015-07-01 13:00:00',2,6),('2015-07-15 14:00:00',2,7),('2015-07-01 13:00:00',2,7);
 
-
-from customer c inner join purchase p on c.
+call five_recent_purchases();
