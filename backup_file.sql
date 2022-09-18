@@ -52,7 +52,7 @@ DROP TABLE IF EXISTS `item`;
 CREATE TABLE `item` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(100) COLLATE utf8mb4_bin DEFAULT NULL,
-  `price` varchar(15) COLLATE utf8mb4_bin DEFAULT NULL,
+  `price` smallint(5) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -63,7 +63,7 @@ CREATE TABLE `item` (
 
 LOCK TABLES `item` WRITE;
 /*!40000 ALTER TABLE `item` DISABLE KEYS */;
-INSERT INTO `item` VALUES (1,'rice','$5/lb'),(2,'flour','$10/lb'),(3,'peanuts','$5/lb'),(4,'onions','$2/lb'),(5,'potatoes','$3/lb'),(6,'tomatoes','$2/lb'),(7,'garlic','$5/lb'),(8,'zuchini','$6/lb'),(9,'coriander','$2 each'),(10,'peppers','$3/lb');
+INSERT INTO `item` VALUES (1,'rice',5),(2,'flour',10),(3,'peanuts',5),(4,'onions',2),(5,'potatoes',3),(6,'tomatoes',2),(7,'garlic',5),(8,'zuchini',6),(9,'coriander',2),(10,'peppers',3);
 /*!40000 ALTER TABLE `item` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -154,4 +154,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-09-18 12:38:19
+-- Dump completed on 2022-09-18 13:02:24
